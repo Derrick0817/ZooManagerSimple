@@ -92,6 +92,8 @@ namespace ZooManager
             if (holdingPen.occupant != null) return;
             if (animalType == "cat") holdingPen.occupant = new Cat("Fluffy");
             if (animalType == "mouse") holdingPen.occupant = new Mouse("Squeaky");
+            if (animalType == "raptor") holdingPen.occupant = new Raptor("Chance the Raptor");
+            if (animalType == "chick") holdingPen.occupant = new Chick("Tweety (uncopyrighted)");
             Console.WriteLine($"Holding pen occupant at {holdingPen.occupant.location.x},{holdingPen.occupant.location.y}");
             ActivateAnimals();
         }
