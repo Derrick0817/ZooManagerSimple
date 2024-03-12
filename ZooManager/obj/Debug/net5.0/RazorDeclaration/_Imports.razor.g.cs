@@ -7,76 +7,76 @@
 namespace ZooManager
 {
     #line hidden
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
-    using Microsoft.AspNetCore.Components;
+    using global::System;
+    using global::System.Collections.Generic;
+    using global::System.Linq;
+    using global::System.Threading.Tasks;
+    using global::Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "/Users/jay/Library/CloudStorage/Dropbox/DGM6308_Winter2024/2023/W7_ZooManager_HW/ZooManager/_Imports.razor"
+#line 1 "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "/Users/jay/Library/CloudStorage/Dropbox/DGM6308_Winter2024/2023/W7_ZooManager_HW/ZooManager/_Imports.razor"
+#line 2 "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "/Users/jay/Library/CloudStorage/Dropbox/DGM6308_Winter2024/2023/W7_ZooManager_HW/ZooManager/_Imports.razor"
+#line 3 "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "/Users/jay/Library/CloudStorage/Dropbox/DGM6308_Winter2024/2023/W7_ZooManager_HW/ZooManager/_Imports.razor"
+#line 4 "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "/Users/jay/Library/CloudStorage/Dropbox/DGM6308_Winter2024/2023/W7_ZooManager_HW/ZooManager/_Imports.razor"
+#line 5 "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "/Users/jay/Library/CloudStorage/Dropbox/DGM6308_Winter2024/2023/W7_ZooManager_HW/ZooManager/_Imports.razor"
+#line 6 "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "/Users/jay/Library/CloudStorage/Dropbox/DGM6308_Winter2024/2023/W7_ZooManager_HW/ZooManager/_Imports.razor"
+#line 7 "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "/Users/jay/Library/CloudStorage/Dropbox/DGM6308_Winter2024/2023/W7_ZooManager_HW/ZooManager/_Imports.razor"
+#line 8 "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "/Users/jay/Library/CloudStorage/Dropbox/DGM6308_Winter2024/2023/W7_ZooManager_HW/ZooManager/_Imports.razor"
+#line 9 "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/_Imports.razor"
 using ZooManager;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "/Users/jay/Library/CloudStorage/Dropbox/DGM6308_Winter2024/2023/W7_ZooManager_HW/ZooManager/_Imports.razor"
+#line 10 "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/_Imports.razor"
 using ZooManager.Shared;
 
 #line default

@@ -1,25 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jay/Desktop/ZooManagerSimple/ZooManager/ZooManager.csproj": {}
+    "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/ZooManager.csproj": {}
   },
   "projects": {
-    "/Users/jay/Desktop/ZooManagerSimple/ZooManager/ZooManager.csproj": {
+    "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/ZooManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jay/Desktop/ZooManagerSimple/ZooManager/ZooManager.csproj",
+        "projectUniqueName": "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/ZooManager.csproj",
         "projectName": "ZooManager",
-        "projectPath": "/Users/jay/Desktop/ZooManagerSimple/ZooManager/ZooManager.csproj",
-        "packagesPath": "/Users/jay/.nuget/packages/",
-        "outputPath": "/Users/jay/Desktop/ZooManagerSimple/ZooManager/obj/",
+        "projectPath": "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/ZooManager.csproj",
+        "packagesPath": "/Users/connorhager/.nuget/packages/",
+        "outputPath": "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/jay/.config/NuGet/NuGet.Config"
+          "/Users/connorhager/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -47,6 +48,18 @@
               "target": "Package",
               "version": "[5.0.17, )"
             },
+            "Microsoft.NET.ILLink.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.100-1.23211.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.100-1.23211.1, )",
+              "autoReferenced": true
+            },
             "System.Net.Http.Json": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -58,7 +71,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -73,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.106/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
