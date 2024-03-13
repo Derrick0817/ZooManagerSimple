@@ -21,37 +21,21 @@ namespace ZooManager
         /* Note our raptor will eat cats and mice! */
         public void Hunt()
         {
-            if (Game.Seek(location.x, location.y, Direction.up, "cat"))
+            if (Game.Seek(location.x, location.y, Direction.up, "cat") || Game.Seek(location.x, location.y, Direction.up, "mouse"))
             {
-                Game.Attack(this, Direction.up);
+                if (Game.Attack(this, Direction.up)) return;
             }
-            else if (Game.Seek(location.x, location.y, Direction.down, "cat"))
+            else if (Game.Seek(location.x, location.y, Direction.down, "cat") || Game.Seek(location.x, location.y, Direction.down, "mouse"))
             {
-                Game.Attack(this, Direction.down);
+                if (Game.Attack(this, Direction.down)) return;
             }
-            else if (Game.Seek(location.x, location.y, Direction.left, "cat"))
+            else if (Game.Seek(location.x, location.y, Direction.left, "cat") || Game.Seek(location.x, location.y, Direction.left, "mouse"))
             {
-                Game.Attack(this, Direction.left);
+                if (Game.Attack(this, Direction.left)) return;
             }
-            else if (Game.Seek(location.x, location.y, Direction.right, "cat"))
+            else if (Game.Seek(location.x, location.y, Direction.right, "cat") || Game.Seek(location.x, location.y, Direction.right, "mouse"))
             {
-                Game.Attack(this, Direction.right);
-            }
-            else if (Game.Seek(location.x, location.y, Direction.up, "mouse"))
-            {
-                Game.Attack(this, Direction.up);
-            }
-            else if (Game.Seek(location.x, location.y, Direction.down, "mouse"))
-            {
-                Game.Attack(this, Direction.down);
-            }
-            else if (Game.Seek(location.x, location.y, Direction.left, "mouse"))
-            {
-                Game.Attack(this, Direction.left);
-            }
-            else if (Game.Seek(location.x, location.y, Direction.right, "mouse"))
-            {
-                Game.Attack(this, Direction.right);
+                if (Game.Attack(this, Direction.right)) return;
             }
         }
     }

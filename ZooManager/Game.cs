@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace ZooManager
 {
@@ -142,13 +143,7 @@ namespace ZooManager
             return false;
         }
 
-        /* This method currently assumes that the attacker has determined there is prey
-         * in the target direction. In addition to bug-proofing our program, can you think
-         * of creative ways that NOT just assuming the attack is on the correct target (or
-         * successful for that matter) could be used?
-         */
-
-        static public void Attack(Animal attacker, Direction d)
+        static public bool Attack(Animal attacker, Direction d)
         {
             Console.WriteLine($"{attacker.name} is attacking {d.ToString()}");
             int x = attacker.location.x;
@@ -157,30 +152,40 @@ namespace ZooManager
             switch (d)
             {
                 case Direction.up:
-                    animalZones[y - 1][x].occupant = attacker;
-                    break;
+                    if (animalZones[y - 1][x].occupant != null)
+                    {
+                        animalZones[y - 1][x].occupant = attacker;
+                        animalZones[y][x].occupant = null;
+                        return true; // hunt successful
+                    }
+                    return false;
                 case Direction.down:
-                    animalZones[y + 1][x].occupant = attacker;
-                    break;
+                    if (animalZones[y + 1][x].occupant != null)
+                    {
+                        animalZones[y + 1][x].occupant = attacker;
+                        animalZones[y][x].occupant = null;
+                        return true; // hunt successful
+                    }
+                    return false;
                 case Direction.left:
-                    animalZones[y][x - 1].occupant = attacker;
-                    break;
+                    if (animalZones[y][x - 1].occupant != null)
+                    {
+                        animalZones[y][x - 1].occupant = attacker;
+                        animalZones[y][x].occupant = null;
+                        return true; // hunt successful
+                    }
+                    return false;
                 case Direction.right:
-                    animalZones[y][x + 1].occupant = attacker;
-                    break;
+                    if (animalZones[y][x + 1].occupant != null)
+                    {
+                        animalZones[y][x + 1].occupant = attacker;
+                        animalZones[y][x].occupant = null;
+                        return true; // hunt successful
+                    }
+                    return false;
             }
-            animalZones[y][x].occupant = null;
+            return false; // nothing to hunt
         }
-
-        /* We can't make the same assumptions with this method that we do with Attack, since
-         * the animal here runs AWAY from where they spotted their target (using the Seek method
-         * to find a predator in this case). So, we need to figure out if the direction that the
-         * retreating animal wants to move is valid. Is movement in that direction still on the board?
-         * Is it just going to send them into another animal? With our cat & mouse setup, one is the
-         * predator and the other is prey, but what happens when we have an animal who is both? The animal
-         * would want to run away from their predators but towards their prey, right? Perhaps we can generalize
-         * this code (and the Attack and Seek code) to help our animals strategize more...
-         */
 
         static public bool Retreat(Animal runner, Direction d)
         {
@@ -217,7 +222,7 @@ namespace ZooManager
                     {
                         animalZones[y + 1][x].occupant = runner;
                         animalZones[y][x].occupant = null;
-                        return true;
+                        return true; // retreat was successful
                     }
                     return false;
                 case Direction.left:
@@ -225,7 +230,7 @@ namespace ZooManager
                     {
                         animalZones[y][x - 1].occupant = runner;
                         animalZones[y][x].occupant = null;
-                        return true;
+                        return true; // retreat was successful
                     }
                     return false;
                 case Direction.right:
@@ -233,7 +238,7 @@ namespace ZooManager
                     {
                         animalZones[y][x + 1].occupant = runner;
                         animalZones[y][x].occupant = null;
-                        return true;
+                        return true; // retreat was successful
                     }
                     return false;
             }

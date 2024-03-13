@@ -31,19 +31,19 @@ namespace ZooManager
         {
             if (Game.Seek(location.x, location.y, Direction.up, "mouse") || Game.Seek(location.x, location.y, Direction.up, "chick"))
             {
-                Game.Attack(this, Direction.up);
+                if (Game.Attack(this, Direction.up)) return;
             }
             else if (Game.Seek(location.x, location.y, Direction.down, "mouse") || Game.Seek(location.x, location.y, Direction.down, "chick"))
             {
-                Game.Attack(this, Direction.down);
+                if (Game.Attack(this, Direction.down)) return;
             }
             else if (Game.Seek(location.x, location.y, Direction.left, "mouse") || Game.Seek(location.x, location.y, Direction.left, "chick"))
             {
-                Game.Attack(this, Direction.left);
+                if (Game.Attack(this, Direction.left)) return;
             }
             else if (Game.Seek(location.x, location.y, Direction.right, "mouse") || Game.Seek(location.x, location.y, Direction.right, "chick"))
             {
-                Game.Attack(this, Direction.right);
+                if (Game.Attack(this, Direction.right)) return;
             }
         }
 
@@ -68,7 +68,7 @@ namespace ZooManager
             }
         }
 
-        public void TaskProcess()
+        public void TaskProcess() // Priority is to flee over hunt
         {
             if (Game.Seek(location.x, location.y, Direction.up, "raptor"))
             {
@@ -88,19 +88,19 @@ namespace ZooManager
             }
             else if (Game.Seek(location.x, location.y, Direction.up, "mouse") || Game.Seek(location.x, location.y, Direction.up, "chick"))
             {
-                Game.Attack(this, Direction.up);
+                if (Game.Attack(this, Direction.up)) return;
             }
             else if (Game.Seek(location.x, location.y, Direction.down, "mouse") || Game.Seek(location.x, location.y, Direction.down, "chick"))
             {
-                Game.Attack(this, Direction.down);
+                if (Game.Attack(this, Direction.down)) return;
             }
             else if (Game.Seek(location.x, location.y, Direction.left, "mouse") || Game.Seek(location.x, location.y, Direction.left, "chick"))
             {
-                Game.Attack(this, Direction.left);
+                if (Game.Attack(this, Direction.left)) return;
             }
             else if (Game.Seek(location.x, location.y, Direction.right, "mouse") || Game.Seek(location.x, location.y, Direction.right, "chick"))
             {
-                Game.Attack(this, Direction.right);
+                if (Game.Attack(this, Direction.right)) return;
             }
         }
     }
