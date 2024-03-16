@@ -15,28 +15,17 @@ namespace ZooManager
         {
             base.Activate();
             Console.WriteLine("I am a raptor. RAAAAAAAAA 'Murica RAAAAAAA ");
-            Hunt();
+            TaskProcess();
         }
 
-        /* Note our raptor will eat cats and mice! */
-        public void Hunt()
+        public void TaskProcess()
         {
-            if (Game.Seek(location.x, location.y, Direction.up, "cat") || Game.Seek(location.x, location.y, Direction.up, "mouse"))
+            TaskCheck = Hunt("cat");
+            if (TaskCheck == false)
             {
-                if (Game.Attack(this, Direction.up)) return;
+                TaskCheck = Hunt("mouse");
             }
-            else if (Game.Seek(location.x, location.y, Direction.down, "cat") || Game.Seek(location.x, location.y, Direction.down, "mouse"))
-            {
-                if (Game.Attack(this, Direction.down)) return;
-            }
-            else if (Game.Seek(location.x, location.y, Direction.left, "cat") || Game.Seek(location.x, location.y, Direction.left, "mouse"))
-            {
-                if (Game.Attack(this, Direction.left)) return;
-            }
-            else if (Game.Seek(location.x, location.y, Direction.right, "cat") || Game.Seek(location.x, location.y, Direction.right, "mouse"))
-            {
-                if (Game.Attack(this, Direction.right)) return;
-            }
+            TurnCheck = true;
         }
     }
 }

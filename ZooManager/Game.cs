@@ -196,12 +196,6 @@ namespace ZooManager
             switch (d)
             {
                 case Direction.up:
-                    /* The logic below uses the "short circuit" property of Boolean &&.
-                     * If we were to check our list using an out-of-range index, we would
-                     * get an error, but since we first check if the direction that we're modifying is
-                     * within the ranges of our lists, if that check is false, then the second half of
-                     * the && is not evaluated, thus saving us from any exceptions being thrown.
-                     */
                     if (y > 0 && animalZones[y - 1][x].occupant == null)
                     {
                         animalZones[y - 1][x].occupant = runner;
@@ -209,14 +203,6 @@ namespace ZooManager
                         return true; // retreat was successful
                     }
                     return false; // retreat was not successful
-                    /* Note that in these four cases, in our conditional logic we check
-                     * for the animal having one square between itself and the edge that it is
-                     * trying to run to. For example,in the above case, we check that y is greater
-                     * than 0, even though 0 is a valid spot on the list. This is because when moving
-                     * up, the animal would need to go from row 1 to row 0. Attempting to go from row 0
-                     * to row -1 would cause a runtime error. This is a slightly different way of testing
-                     * if 
-                     */
                 case Direction.down:
                     if (y < numCellsY - 1 && animalZones[y + 1][x].occupant == null)
                     {

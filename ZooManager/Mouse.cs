@@ -18,37 +18,17 @@ namespace ZooManager
         {
             base.Activate();
             Console.WriteLine("I am a mouse. Squeak.");
-            Flee();
+            TaskProcess();
         }
 
-        /* Note that our mouse is (so far) a teeny bit more strategic than our cat.
-         * The mouse looks for cats and tries to run in the opposite direction to
-         * an empty spot, but if it finds that it can't go that way, it looks around
-         * some more. However, the mouse currently still has a major weakness! He
-         * will ONLY run in the OPPOSITE direction from a cat! The mouse won't (yet)
-         * consider running to the side to escape! However, we have laid out a better
-         * foundation here for intelligence, since we actually check whether our escape
-         * was succcesful -- unlike our cats, who just assume they'll get their prey!
-         */
-        public void Flee()
+        public void TaskProcess()
         {
-            if (Game.Seek(location.x, location.y, Direction.up, "cat") || Game.Seek(location.x, location.y, Direction.up, "raptor"))
+            TaskCheck = Flee("raptor");
+            if (TaskCheck == false)
             {
-                if (Game.Retreat(this, Direction.down)) return;
+                TaskCheck = Flee("cat");
             }
-            if (Game.Seek(location.x, location.y, Direction.down, "cat") || Game.Seek(location.x, location.y, Direction.down, "raptor"))
-            {
-                if (Game.Retreat(this, Direction.up)) return;
-            }
-            if (Game.Seek(location.x, location.y, Direction.left, "cat") || Game.Seek(location.x, location.y, Direction.left, "raptor"))
-            {
-                if (Game.Retreat(this, Direction.right)) return;
-            }
-            if (Game.Seek(location.x, location.y, Direction.right, "cat") || Game.Seek(location.x, location.y, Direction.right, "raptor"))
-            {
-                if (Game.Retreat(this, Direction.left)) return;
-            }
+            TurnCheck = true;
         }
     }
 }
-
