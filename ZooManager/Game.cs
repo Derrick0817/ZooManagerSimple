@@ -108,10 +108,21 @@ namespace ZooManager
                     for (var x = 0; x < numCellsX; x++)
                     {
                         var zone = animalZones[y][x];
-                        if (zone.occupant != null && zone.occupant.reactionTime == r)
+                        if (zone.occupant != null && zone.occupant.reactionTime == r && zone.occupant.TurnCheck == false)
                         {
                             zone.occupant.Activate();
                         }
+                    }
+                }
+            }
+            for (var y = 0; y < numCellsY; y++)
+            {
+                for (var x = 0; x < numCellsX; x++)
+                {
+                    var zone = animalZones[y][x];
+                    if (zone.occupant != null)
+                    {
+                        zone.occupant.TurnCheck = false;
                     }
                 }
             }
