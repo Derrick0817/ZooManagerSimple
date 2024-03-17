@@ -51,7 +51,7 @@ namespace ZooManager
         {
             if (Game.Seek(location.x, location.y, Direction.up, predator))
             {
-                if (Game.Seek(location.x, location.y, Direction.up, "null"))
+                if (Game.Seek(location.x, location.y, Direction.up, "null")) // check all directions for fleeing
                 {
                     if (Game.Retreat(this, Direction.up)) return true;
                 }
@@ -71,7 +71,7 @@ namespace ZooManager
             }
             if (Game.Seek(location.x, location.y, Direction.down, predator))
             {
-                if (Game.Seek(location.x, location.y, Direction.up, "null"))
+                if (Game.Seek(location.x, location.y, Direction.up, "null")) // check all directions for fleeing
                 {
                     if (Game.Retreat(this, Direction.up)) return true;
                 }
@@ -91,7 +91,7 @@ namespace ZooManager
             }
             if (Game.Seek(location.x, location.y, Direction.left, predator))
             {
-                if (Game.Seek(location.x, location.y, Direction.up, "null"))
+                if (Game.Seek(location.x, location.y, Direction.up, "null")) // check all directions for fleeing
                 {
                     if (Game.Retreat(this, Direction.up)) return true;
                 }
@@ -111,7 +111,7 @@ namespace ZooManager
             }
             if (Game.Seek(location.x, location.y, Direction.right, predator))
             {
-                if (Game.Seek(location.x, location.y, Direction.up, "null"))
+                if (Game.Seek(location.x, location.y, Direction.up, "null")) // check all directions for fleeing
                 {
                     if (Game.Retreat(this, Direction.up)) return true;
                 }

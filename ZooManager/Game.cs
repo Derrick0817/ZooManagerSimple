@@ -130,7 +130,7 @@ namespace ZooManager
 
         static public bool Seek(int x, int y, Direction d, string target)
         {
-            if (target == "null")
+            if (target == "null") // Searching for an emtpy spot
             {
                 switch (d)
                 {
@@ -262,7 +262,7 @@ namespace ZooManager
                     }
                     return false;
             }
-            return false; // fallback
+            return false; // cannot retreat
         }
     }
 }
