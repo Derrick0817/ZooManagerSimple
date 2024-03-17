@@ -51,23 +51,83 @@ namespace ZooManager
         {
             if (Game.Seek(location.x, location.y, Direction.up, predator))
             {
-                if (Game.Retreat(this, Direction.down)) return true;
-                return false;
+                if (Game.Seek(location.x, location.y, Direction.up, "null"))
+                {
+                    if (Game.Retreat(this, Direction.up)) return true;
+                }
+                if (Game.Seek(location.x, location.y, Direction.down, "null"))
+                {
+                    if (Game.Retreat(this, Direction.down)) return true;
+                }
+                if (Game.Seek(location.x, location.y, Direction.left, "null"))
+                {
+                    if (Game.Retreat(this, Direction.left)) return true;
+                }
+                if (Game.Seek(location.x, location.y, Direction.right, "null"))
+                {
+                    if (Game.Retreat(this, Direction.right)) return true;
+                }
+                return false; // can't run
             }
             if (Game.Seek(location.x, location.y, Direction.down, predator))
             {
-                if (Game.Retreat(this, Direction.up)) return true;
-                return false;
+                if (Game.Seek(location.x, location.y, Direction.up, "null"))
+                {
+                    if (Game.Retreat(this, Direction.up)) return true;
+                }
+                if (Game.Seek(location.x, location.y, Direction.down, "null"))
+                {
+                    if (Game.Retreat(this, Direction.down)) return true;
+                }
+                if (Game.Seek(location.x, location.y, Direction.left, "null"))
+                {
+                    if (Game.Retreat(this, Direction.left)) return true;
+                }
+                if (Game.Seek(location.x, location.y, Direction.right, "null"))
+                {
+                    if (Game.Retreat(this, Direction.right)) return true;
+                }
+                return false; // can't run
             }
             if (Game.Seek(location.x, location.y, Direction.left, predator))
             {
-                if (Game.Retreat(this, Direction.right)) return true;
-                return false;
+                if (Game.Seek(location.x, location.y, Direction.up, "null"))
+                {
+                    if (Game.Retreat(this, Direction.up)) return true;
+                }
+                if (Game.Seek(location.x, location.y, Direction.down, "null"))
+                {
+                    if (Game.Retreat(this, Direction.down)) return true;
+                }
+                if (Game.Seek(location.x, location.y, Direction.left, "null"))
+                {
+                    if (Game.Retreat(this, Direction.left)) return true;
+                }
+                if (Game.Seek(location.x, location.y, Direction.right, "null"))
+                {
+                    if (Game.Retreat(this, Direction.right)) return true;
+                }
+                return false; // can't run
             }
             if (Game.Seek(location.x, location.y, Direction.right, predator))
             {
-                if (Game.Retreat(this, Direction.left)) return true;
-                return false;
+                if (Game.Seek(location.x, location.y, Direction.up, "null"))
+                {
+                    if (Game.Retreat(this, Direction.up)) return true;
+                }
+                if (Game.Seek(location.x, location.y, Direction.down, "null"))
+                {
+                    if (Game.Retreat(this, Direction.down)) return true;
+                }
+                if (Game.Seek(location.x, location.y, Direction.left, "null"))
+                {
+                    if (Game.Retreat(this, Direction.left)) return true;
+                }
+                if (Game.Seek(location.x, location.y, Direction.right, "null"))
+                {
+                    if (Game.Retreat(this, Direction.right)) return true;
+                }
+                return false; // can't run
             }
             return false; // nothing to flee
         }

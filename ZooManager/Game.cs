@@ -130,26 +130,49 @@ namespace ZooManager
 
         static public bool Seek(int x, int y, Direction d, string target)
         {
-            switch (d)
+            if (target == "null")
             {
-                case Direction.up:
-                    y--;
-                    break;
-                case Direction.down:
-                    y++;
-                    break;
-                case Direction.left:
-                    x--;
-                    break;
-                case Direction.right:
-                    x++;
-                    break;
+                switch (d)
+                {
+                    case Direction.up:
+                        y--;
+                        break;
+                    case Direction.down:
+                        y++;
+                        break;
+                    case Direction.left:
+                        x--;
+                        break;
+                    case Direction.right:
+                        x++;
+                        break;
+                }
+                if (y < 0 || x < 0 || y > numCellsY - 1 || x > numCellsX - 1) return false;
+                if (animalZones[y][x].occupant == null) return true;
             }
-            if (y < 0 || x < 0 || y > numCellsY - 1 || x > numCellsX - 1) return false;
-            if (animalZones[y][x].occupant == null) return false;
-            if (animalZones[y][x].occupant.species == target)
+            else
             {
-                return true;
+                switch (d)
+                {
+                    case Direction.up:
+                        y--;
+                        break;
+                    case Direction.down:
+                        y++;
+                        break;
+                    case Direction.left:
+                        x--;
+                        break;
+                    case Direction.right:
+                        x++;
+                        break;
+                }
+                if (y < 0 || x < 0 || y > numCellsY - 1 || x > numCellsX - 1) return false;
+                if (animalZones[y][x].occupant == null) return false;
+                if (animalZones[y][x].occupant.species == target)
+                {
+                    return true;
+                }
             }
             return false;
         }
