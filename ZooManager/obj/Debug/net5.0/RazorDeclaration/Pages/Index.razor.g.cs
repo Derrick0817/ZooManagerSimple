@@ -13,70 +13,70 @@ namespace ZooManager.Pages
     using global::System.Threading.Tasks;
     using global::Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/_Imports.razor"
+#line 1 "D:\6308Project\ZooKeeperSimple\ZooManager\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/_Imports.razor"
+#line 2 "D:\6308Project\ZooKeeperSimple\ZooManager\_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/_Imports.razor"
+#line 3 "D:\6308Project\ZooKeeperSimple\ZooManager\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/_Imports.razor"
+#line 4 "D:\6308Project\ZooKeeperSimple\ZooManager\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/_Imports.razor"
+#line 5 "D:\6308Project\ZooKeeperSimple\ZooManager\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/_Imports.razor"
+#line 6 "D:\6308Project\ZooKeeperSimple\ZooManager\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/_Imports.razor"
+#line 7 "D:\6308Project\ZooKeeperSimple\ZooManager\_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/_Imports.razor"
+#line 8 "D:\6308Project\ZooKeeperSimple\ZooManager\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/_Imports.razor"
+#line 10 "D:\6308Project\ZooKeeperSimple\ZooManager\_Imports.razor"
 using ZooManager.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/Pages/Index.razor"
+#line 2 "D:\6308Project\ZooKeeperSimple\ZooManager\Pages\Index.razor"
 using ZooManager;
 
 #line default
@@ -91,7 +91,7 @@ using ZooManager;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 128 "/Users/connorhager/Documents/GitHub/ZooManagerSimple/ZooManager/Pages/Index.razor"
+#line 128 "D:\6308Project\ZooKeeperSimple\ZooManager\Pages\Index.razor"
        
     protected override void OnInitialized()
     {
